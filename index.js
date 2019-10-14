@@ -9,7 +9,6 @@ const fs = require('fs');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
 
-
 //Instalib/datae the HTTP Server
 const httpServer = http.createServer(function(req, res){
   unifiedServer(req, res);
@@ -96,5 +95,7 @@ statuseCode = typeof(statusCode) == "number" ? statusCode: 200;
 let router = {
   users : handlers.users,
   ping : handlers.ping,
-  hello : handlers.hello
+  hello : handlers.hello,
+  tokens : handlers.tokens,
+  checks : handlers.checks
 };
